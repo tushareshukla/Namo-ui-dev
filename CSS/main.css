@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css');
+@import './utility-classes.css';
+@import './navbar.css';
+@import './aside.css';
+@import '/components/components.css';
+@import './footer.css';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--primary-black-color);
+}
+
+.container-flex {
+    display: flex;
+}
+
+.container-flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-black-color);
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    color: var(--grey-color);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 4.5rem);
+}
+
+.hero-content button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px #c3d2ff;
+}
+
+.primary-text-color {
+    color: var(--primary-color);
+}
+
+/* Documentation site */
+
+.grid-page-layout {
+    display: grid;
+    grid-template-columns: 22% 1fr 1fr 1fr;
+    grid-template-areas: 
+    'header header header header'
+    'aside main main main'
+    'aside main main main'
+    ;
+}
+
+.main-container {
+    grid-area: main;
+    overflow-x: auto;
+}
+
+.radius-5 {
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    
+    html {
+        font-size: 80%;
+    }
+
+    .grid-page-layout {
+        grid-template-areas: 
+        'header header header header'
+        'aside aside aside aside'
+        'main main main main'
+        ;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+    html {
+        font-size: 70%;
+    }
+}

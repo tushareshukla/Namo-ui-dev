@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="theme-color" content="#6A91FF">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/stackoverflow-dark.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>Docs | Namo UI</title>
+</head>
+
+<body>
+    <div class="grid-page-layout">
+        <!-- Navbar -->
+        <nav class="nav-bar shadow">
+            <div class="left-nav">
+                <a class="h2" href="./index.html"><span class="primary-text-color">Namo</span> UI</a>
+            </div>
+            <ul class="hide right-nav">
+                <li><a class="nav-pills" href="./index.html">Home</a></li>
+                <li><a class="nav-pills" href="#">Docs</a></li>
+                <li><a class="nav-pills" target="_blank" href="https://github.com/tushareshukla">GitHub</a></li>
+            </ul>
+
+            <!-- Hamburger Menu for smaller display -->
+            <i class='hamburger-icon bx bx-menu'></i>
+            <div class="hamburger-menu">
+                <i class='hamburger-close bx bx-x'></i>
+                <ul class="hamburger-list">
+                    <li class="hamburger-link"><a href="./index.html">Home</a></li>
+                    <li class="hamburger-link"><a href="./docsite.html">Docs</a></li>
+                    <li class="hamburger-link"><a target="_blank"
+                            href="https://github.com/tushareshukla">GitHub</a></li>
+                    <li class="hamburger-link"><a href="#installation">Installation</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside class="aside-container aside-height">
+            <div class="get-started hide">
+                <h3 class="h3 px-5 py-2">Get Started</h3>
+                <ul>
+                    <li class="sidebar-link"><a class="px-5 py-2" href="#intro">Introduction</a></li>
+                    <li class="sidebar-link"><a class="px-5 py-2" href="#installation">Installation</a></li>
+                </ul>
+            </div>
+
+            <div class="aside-header">
+                <h3 class="h3 px-5 py-2">Components</h3>
+                <button id="dropdown-btn"><i class='bx bxs-chevron-down'></i></button>
+            </div>
+
+            <ul class="dropdown-list hide">
+                <li class="sidebar-link"><a class="px-5 py-2" href="#alert">Alerts</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#avatar">Avatar</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#badge">Badge</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#button">Button</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#card">Card</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#grid">Grid</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#image">Image</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#input">Input</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#list">Lists</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#modal">Modal</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#navigation">Navigation</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#rating">Rating</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#slider">Slider</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#toast">Toast</a></li>
+                <li class="sidebar-link"><a class="px-5 py-2" href="#typography">Typography</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <main class="my-4 mx-5 main-container">
+
+            <!-- Introduction -->
+            <h1 id="intro" class="h1">Introduction</h1>
+            <p class="small-text py-2">
+                Namo UI is a <span class="primary-text-color">free, open-source modern</span> CSS library that
+                provides ready-to-use frontend components that you can easily combine to build responsive interface.
+                Namo UI helps you to quickly build your projects, by focusing much on functionality and not worring
+                about your designs.
+            </p>
+
+            <hr class="my-4">
+
+            <h1 id="installation" class="h1">Installation Guide</h1>
+            <p class="py-2 install-code small-text">
+                Copy and paste the stylesheet
+                <code>&lt;link></code>
+                in the
+                <code>&lt;head></code>
+                tag of your html document. So that you can style your components by just adding class names to your html
+                elements.
+            </p>
+
+            <div>
+                <pre>
+                    <code class="html code-example">
+                        &lt;link rel="stylesheet" href="https://Namo-ui.netlify.app/CSS/main.css">
+                    </code>
+                </pre>
+            </div>
+
+
+            <hr class="my-4 section-hr">
+
+            <!-- Alert Component -->
+            <div>
+                <h1 id="alert" class="h1">Alerts</h1>
+                <p class="py-2 medium-text">Provide contextual feedback messages for typical user actions with the
+                    handful of available and flexible alert messages.</p>
+                <hr class="my-4">
+                <h2 class="h2">Simple Alert</h2>
+                <p class="py-2 small-text">To use this alert just use class name <span
+                        class="primary-text-color">alert-box</span> and also add class according to alert type - <span
+                        class="primary-text-color">alert-primary, alert-secondary, alert-danger, alert-success,
+                        alert-warning</span>. (e.g <span class="primary-text-color">class="alert-box
+                        alert-primary")</span>.</p>
+
+                <div class="p-2 my-2 radius-5 component-example">
+                    <!-- Primary Alert -->
+                    <div class="alert-box alert-primary">
+                        <strong>Primary!</strong> This is a primary alert!
+                    </div>
+
+                    <!-- Error Alert -->
+                    <div class="alert-box error-alert">
+                        <strong>Error!</strong> This is a error alert!
+                    </div>
+
+                    <!-- Success Alert -->
+                    <div class="alert-box success-alert">
+                        <strong>Success!</strong> This is a success alert!
+                    </div>
+
+                    <!-- Warning Alert -->
+                    <div class="alert-box warning-alert">
+                        <strong>Warning!</strong> This is a warning alert!
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                           &lt;!-- Primary Alert -->
+
+                            &lt;div class="alert-box alert-primary">
+                                &lt;strong>Primary!&lt;/strong> This is a primary alert!
+                            &lt;/div>
+
+                            &lt;!-- Error Alert -->
+
+                            &lt;div class="alert-box error-alert">
+                                &lt;strong>Error!&lt;/strong> This is a error alert!
+                            &lt;/div>
+
+                            &lt;!-- Success Alert -->
+
+                            &lt;div class="alert-box success-alert">
+                                &lt;strong>Success!&lt;/strong> This is a success alert!
+                            &lt;/div>
+
+                             &lt;!-- Warning Alert -->
+                             
+                            &lt;div class="alert-box warning-alert">
+                                &lt;strong>Warning!&lt;/strong> This is a warning alert!
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <h2 class="h2">Outline Alert</h2>
+                <p class="py-2 small-text">
+                    To use outline alert just use class name <span class="primary-text-color">alert-box</span> and also
+                    add class according to outline alert type - <span class="primary-text-color">alert-outline-primary,
+                        alert-outline-secondary, alert-outline-danger, alert-outline-success,
+                        alert-outline-warning</span>. (e.g <span class="primary-text-color">class="alert-box
+                        alert-outline-primary")</span>.
+                </p>
+
+                <div class="p-2 my-2 radius-5 component-example">
+
+                    <div class="alert-box alert-outline-primary">
+                        <strong>Primary!</strong> This is a primary alert!
+                    </div>
+
+                    <div class="alert-box error-outline-alert">
+                        <strong>Error!</strong> This is a error alert!
+                    </div>
+
+                    <div class="alert-box success-outline-alert">
+                        <strong>Success!</strong> This is a success alert!
+                    </div>
+
+                    <div class="alert-box warning-outline-alert">
+                        <strong>Warning!</strong> This is a warning alert!
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;!-- Primary outline Alert -->
+
+                            &lt;div class="alert-box alert-outline-primary">
+                                &lt;strong>Primary!&lt;/strong> This is a primary alert!
+                            &lt;/div>
+
+                            &lt;!-- Error outline Alert -->
+
+                            &lt;div class="alert-box error-outline-alert">
+                                &lt;strong>Error!&lt;/strong> This is a error alert!
+                            &lt;/div>
+
+                            &lt;!-- Success outline Alert -->
+
+                            &lt;div class="alert-box success-outline-alert">
+                                &lt;strong>Success!&lt;/strong> This is a success alert!
+                            &lt;/div>
+
+                            &lt;!-- Warning outline Alert -->
+                             
+                            &lt;div class="alert-box warning-outline-alert">
+                                &lt;strong>Warning!&lt;/strong> This is a warning alert!
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Avatar Component -->
+
+            <div>
+                <h1 id="avatar" class="h1">Avatar</h1>
+                <p class="py-2 medium-text">Avatar can be used to show user's profile picture on profile information
+                    page,
+                    on navigation bar, in blogs grid items.</p>
+
+                <hr class="my-4">
+
+                <!-- Image Avatar -->
+
+                <h2 class="h2">Image Avatar</h2>
+                <p class="py-2 small-text">
+                    Avatar is available in 4 different sizes. You can use image in Avatar. You need to include class
+                    <span class="primary-text-color">avatar</span> in img tag and for size add class according to size
+                    <span class="primary-text-color">avatar-lg-size, avatar-md-size, avatar-sm-size,
+                        avatar-xs-size</span>
+                    (e.g. <span class="primary-text-color">class="avatar avatar-lg-size"</span>).
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 container-flex-align-center component-example">
+                    <img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-lg-size mx-2">
+                    <img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-md-size mx-2">
+                    <img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-sm-size mx-2">
+                    <img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-xs-size mx-2">
+                </div>
+
+                <div>
+                    <pre>
+                    <code class="html code-example">
+
+                        &lt;!-- Avatar large size -->
+
+                        &lt;img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-lg-size">
+
+                        &lt;!-- Avatar medium size -->
+
+                        &lt;img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-md-size">
+
+                        &lt;!-- Avatar small size -->
+
+                        &lt;img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-sm-size">
+
+                        &lt;!-- Avatar extra small size -->
+
+                        &lt;img src="./components/Images/avatar.png" alt="avatar" class="avatar avatar-xs-size">
+                    </code>
+                </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Text Avatar -->
+
+                <h2 class="h2">Text Avatar</h2>
+                <p class="py-2 small-text">
+                    You can use initial letters of user in Avatar as well. You need to include class <span
+                        class="primary-text-color">avatar-text</span> along with avatar and size class. (e.g. <span
+                        class="primary-text-color">class="avatar avatar-lg-size avatar-text</span>")
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 component-example container-flex-align-center gap-3">
+
+                    <div>
+                        <div class="avatar avatar-lg-size avatar-text" role="img">AM</div>
+                    </div>
+
+                    <div>
+                        <div class="avatar avatar-md-size avatar-text" role="img">AM</div>
+                    </div>
+
+                    <div>
+                        <div class="avatar avatar-sm-size avatar-text" role="img">AM</div>
+                    </div>
+
+                    <div>
+                        <div class="avatar avatar-xs-size avatar-text" role="img">AM</div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;!-- Large text avatar -->
+
+                            &lt;div class="avatar avatar-lg-size avatar-text" role="img">AM&lt;/div>
+
+                            &lt;!-- Medium text avatar -->
+
+                            &lt;div class="avatar avatar-md-size avatar-text" role="img">AM&lt;/div>
+
+                            &lt;!-- Small text avatar -->
+
+                            &lt;div class="avatar avatar-sm-size avatar-text" role="img">AM&lt;/div>
+
+                            &lt;!-- Extra small text avatar -->
+
+                            &lt;div class="avatar avatar-xs-size avatar-text" role="img">AM&lt;/div>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Badge Component -->
+
+            <div>
+                <h1 class="h1" id="badge">Badge</h1>
+                <p class="py-2 medium-text">Badges are being used to display a notification count or status information.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Avatar Badge -->
+
+                <h2 class="h2">Avatar Badge</h2>
+                <p class="py-2 small-text">
+                    You can use avatar badge to show the current status of a user (e.g.
+                    <span class="primary-text-color">online, offline, do not disturb
+                    </span>
+                    ). Check code below to copy the html part as is.
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 component-example container-flex-align-center gap-3">
+                    <div class="badge-container">
+                        <img src="./components/Images/avatar.png" alt="avatar-badge" class="avatar avatar-md-size">
+                        <div class="status-badge online"></div>
+                    </div>
+
+                    <div class="badge-container">
+                        <img src="./components/Images/avatar.png" alt="avatar-badge" class="avatar avatar-md-size">
+                        <div class="status-badge offline"></div>
+                    </div>
+
+                    <div class="badge-container">
+                        <img src="./components/Images/avatar.png" alt="avatar-badge" class="avatar avatar-md-size">
+                        <div class="status-badge dnd"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;!-- Use "badge-container" as parent class and variant status class on child -->
+
+                            &lt;div class="badge-container">
+                                &lt;img src="./components/Images/avatar.png" alt="avatar-badge" class="avatar avatar-md-size">
+                                &lt;div class="status-badge online">&lt;/div>
+                            &lt;/div>
+        
+                            &lt;div class="badge-container">
+                                &lt;img src="./components/Images/avatar.png" alt="avatar-badge" class="avatar avatar-md-size">
+                                &lt;div class="status-badge offline">&lt;/div>
+                            &lt;/div>
+                            
+                            &lt;div class="badge-container">
+                                &lt;img src="./components/Images/avatar.png" alt="avatar-badge" class="avatar avatar-md-size">
+                                &lt;div class="status-badge dnd">&lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Icon Badge -->
+
+                <h2 class="h2">Icon Badge</h2>
+                <p class="py-2 small-text">You can show cart or notification count by using badge on icons.</p>
+
+                <div class="p-2 px-6 my-2 radius-5 component-example container-flex">
+                    <div class="badge-container mx-4">
+                        <i class='badge-container-icon bx bxs-cart'></i>
+                        <div class="icon-badge-number">9</div>
+                    </div>
+
+                    <div class="badge-container mx-4">
+                        <i class='badge-container-icon bx bxs-envelope'></i>
+                        <div class="icon-badge-number dnd">10</div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;!-- Use "badge-container" as parent class and "icon-badge-number" class on child -->
+
+                            &lt;div class="badge-container">
+                                &lt;i class='badge-container-icon bx bxs-cart'>&lt;/i>
+                                &lt;div class="icon-badge-number">20&lt;/div>
+                            &lt;/div>
+                            
+                            &lt;div class="badge-container">
+                                &lt;i class='badge-container-icon bx bxs-envelope'>&lt;/i>
+                                &lt;div class="icon-badge-number dnd">10&lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Button Component -->
+
+            <div>
+                <h1 id="button" class="h1">Button</h1>
+                <p class="py-2 medium-text">
+                    Buttons are also called as call to action. Buttons allow users to take actions, and make choices,
+                    with a single tap.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Primary Button -->
+
+                <h2 class="h2">Primary Button</h2>
+                <p class="py-2 small-text">
+                    Whenever you want your user to click on a link or button, use primary style buttons.
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 container-flex-align-center gap-3 component-example">
+                    <button class="btn primary-solid-btn">Primary-solid</button>
+
+                    <button class="btn secondary-solid-btn">Secondary-solid</button>
+
+                    <button class="btn primary-outline-btn">Primary-outline</button>
+
+                    <button class="btn secondary-outline-btn">Secondary-outline</button>
+
+                    <button class="btn primary-error-btn">Error</button>
+
+                    <button class="btn primary-success-btn">Success</button>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;button class="btn primary-solid-btn">Primary-solid&lt;/button>
+
+                            &lt;button class="btn secondary-solid-btn">Secondary-solid&lt;/button>
+
+                            &lt;button class="btn primary-outline-btn">Primary-outline&lt;/button>
+
+                            &lt;button class="btn secondary-outline-btn">Secondary-outline&lt;/button>
+
+                            &lt;button class="btn primary-error-btn">Error&lt;/button>
+                            
+                            &lt;button class="btn primary-success-btn">Success&lt;/button>
+                            
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Link Button -->
+
+                <h2 class="h2">Link Button</h2>
+                <p class="py-2 small-text">
+                    You can attach a link action like button just by adding the link in the <span
+                        class="primary-text-color">href</span> attribute of an anchor tag.
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 container-flex-align-center gap-3 component-example">
+                    <a onclick="return false" href="#">
+                        <button class="btn primary-solid-btn">Link</button>
+                    </a>
+                    <a onclick="return false" href="#">
+                        <button class="btn primary-outline-btn">Outline Link</button>
+                    </a>
+                    <a onclick="return false" href="#" class="primary-link">Primary Link</a>
+                    <a onclick="return false" href="#" class="secondary-link">Secondary Link</a>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;a href="#">
+                                &lt;button class="btn primary-solid-btn">Link&lt;/button>
+                            &lt;/a>
+
+                            &lt;a href="#">
+                                &lt;button class="btn primary-outline-btn">Outline Link&lt;/button>
+                            &lt;/a>
+
+                            &lt;a href="#" class="primary-link">Primary Link&lt;/a>
+
+                            &lt;a href="#" class="secondary-link">Secondary Link&lt;/a>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Icon Button -->
+
+                <h2 class="h2">Icon Button</h2>
+                <p class="py-2 small-text">
+                    You can create icon button just by adding <span class="primary-text-color">"btn-icon"</span> as
+                    child
+                    class name and <span class="primary-text-color">"primary-btn-text-icon"</span> to parent class name.
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 container-flex-align-center gap-3 component-example">
+                    <button class="btn primary-outline-btn primary-btn-text-icon">
+                        <i class='btn-icon bx bxs-cart'></i>Add to cart
+                    </button>
+
+                    <button class="btn primary-solid-btn primary-btn-text-icon">
+                        <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                    </button>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;button class="btn primary-outline-btn primary-btn-text-icon">
+                                &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                            &lt;/button>
+        
+                            &lt;button class="btn primary-solid-btn primary-btn-text-icon">
+                                &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                            &lt;/button>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Floating Action Button -->
+
+                <h2 class="h2">Floating Action Button</h2>
+                <p class="py-2 small-text">
+                    A floating action button (FAB) performs the primary, or most common, action on a screen. It appears
+                    in front of all screen content, typically as a circular shape with an icon in its center.
+                    You can use FAB by adding <span class="primary-text-color">"btn-fab"</span> as child class name
+                    inside anchor parent tag.
+                </p>
+
+                <div class="p-2 px-6 my-2 radius-5 component-example container-flex-align-center gap-3">
+                    <a onclick="return false" href="#">
+                        <i class='btn-fab bx bx-up-arrow-alt'></i>
+                    </a>
+
+                    <a onclick="return false" href="#">
+                        <span class="btn-fab">+</span>
+                    </a>
+
+                    <a onclick="return false" href="#">
+                        <span class="btn-fab">-</span>
+                    </a>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;a href="#">
+                                &lt;i class='btn-fab bx bx-up-arrow-alt'>&lt;/i>
+                            &lt;/a>
+                            
+                            &lt;a href="#">
+                                &lt;span class="btn-fab">+&lt;/span>
+                            &lt;/a>
+                            
+                            &lt;a href="#">
+                                &lt;span class="btn-fab">-&lt;/span>
+                            &lt;/a>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Card Component -->
+
+            <div>
+                <h1 id="card" class="h1">Card</h1>
+                <p class="py-2 medium-text">
+                    Cards are used to show user related data collectively, like product details.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Text only card -->
+
+                <h2 class="h2">Text only card</h2>
+                <p class="py-2 small-text">
+                    Use text card component in places where you want to show a title and description related to that
+                    title. Copy below code and put your desired text and you are good to go.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Card Title</div>
+                        </div>
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deleniti ab hic ipsa quasi
+                            harum?
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="card">
+                                &lt;div class="card-header">
+                                    &lt;div class="card-title">Card Title&lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deleniti ab hic ipsa quasi harum?
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Card with dismiss -->
+
+                <h2 class="h2">Card with dismiss</h2>
+
+                <p class="py-2 small-text">
+                    You can add close icon button into your card to close the card. Just by adding below given classes.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Card Title</div>
+                            <i class='close bx bx-x'></i>
+                        </div>
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deleniti ab hic ipsa quasi
+                            harum?
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="card">
+                                &lt;div class="card-header">
+                                    &lt;div class="card-title">Card Title&lt;/div>
+                                    &lt;i class='close bx bx-x'>&lt;/i>
+                                &lt;/div>
+                                &lt;div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deleniti ab hic ipsa quasi harum?
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Vertical card -->
+
+                <h2 class="h2">Vertical card</h2>
+                <p class="py-2 small-text">
+                    To use vertical card with image, add class <span class="primary-text-color">"vertical-card"</span>.
+                    Copy below code and put your desired text and image and you are good to go.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example gap-3 container-flex-center">
+                    <div class="vertical-card">
+                        <div class="card-header">
+                            <div class="card-img-container">
+                                <img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                <i class='card-wishlist-icon bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="item-price">Rs. 5,999</div>
+                            <div class="card-description">Men's grey shacket</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-cart'></i>Add to cart
+                            </button>
+
+                            <button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="vertical-card">
+                        <div class="card-header">
+                            <div class="card-img-container">
+                                <img class="card-img" src="./components/Images/card-woman-img.jpeg" alt="men-shacket">
+                                <i class='card-wishlist-icon bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="item-price">Rs. 1,999</div>
+                            <div class="card-description">Women's black top</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-cart'></i>Add to cart
+                            </button>
+
+                            <button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="vertical-card">
+                                &lt;div class="card-header">
+                                    &lt;div class="card-img-container">
+                                        &lt;img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                        &lt;i class='card-wishlist-icon bx bx-heart'>&lt;/i>
+                                    &lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-body">
+                                    &lt;div class="item-price">Rs. 5,999&lt;/div>
+                                    &lt;div class="card-description">Men's grey shacket&lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-footer">
+                                    &lt;button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                                    &lt;/button>
+                
+                                    &lt;button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                                    &lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+        
+                            &lt;div class="vertical-card">
+                                &lt;div class="card-header">
+                                    &lt;div class="card-img-container">
+                                        &lt;img class="card-img" src="./components/Images/card-woman-img.jpeg" alt="men-shacket">
+                                        &lt;i class='card-wishlist-icon bx bx-heart'>&lt;/i>
+                                    &lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-body">
+                                    &lt;div class="item-price">Rs. 1,999&lt;/div>
+                                    &lt;div class="card-description">Women's black top&lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-footer">
+                                    &lt;button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                                    &lt;/button>
+                
+                                    &lt;button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                                    &lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Horizontal card -->
+
+                <h2 class="h2">Horizontal card</h2>
+                <p class="py-2 small-text">
+                    To use horizontal card with image, add class <span
+                        class="primary-text-color">"card-horizontal"</span> with <span
+                        class="primary-text-color">"card"</span> class. Copy below code and put your desired text and
+                    image and you are good to go.
+                </p>
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+                    <div class="card card-horizontal">
+                        <div class="card-img-container">
+                            <img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                            <i class='card-wishlist-icon bx bx-heart'></i>
+                        </div>
+                        <div class="card-horizontal-details">
+                            <div class="item-price">Rs. 5,999</div>
+                            <div class="card-description">Men's grey shacket</div>
+                            <div class="card-horizontal-button">
+                                <button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                    <i class='btn-icon bx bxs-cart'></i>Add to cart
+                                </button>
+
+                                <button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                    <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="card card-horizontal">
+                                &lt;div class="card-img-container">
+                                    &lt;img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                    &lt;i class='card-wishlist-icon bx bx-heart'>&lt;/i>
+                                &lt;/div>
+                                &lt;div class="card-horizontal-details">
+                                    &lt;div class="item-price">Rs. 5,999&lt;/div>
+                                    &lt;div class="card-description">Men's grey shacket&lt;/div>
+                                    &lt;div class="card-horizontal-button">
+                                        &lt;button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                            &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                                        &lt;/button>
+                    
+                                        &lt;button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                            &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                                        &lt;/button>
+                                    &lt;/div>
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Card with badge -->
+
+                <h2 class="h2">Card with badge</h2>
+                <p class="py-2 small-text">
+                    To get badge on card, add class <span class="primary-text-color">"card-badge"</span> to child
+                    element of <span class="primary-text-color">"card"</span> class. Copy below code and put your
+                    desired badge text and image and you are good to go.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+
+                    <div class="card">
+                        <span class="card-badge">TRENDING</span>
+                        <div class="card-header">
+                            <div class="card-img-container">
+                                <img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                <i class='card-wishlist-icon bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="item-price">Rs. 5,999</div>
+                            <div class="card-description">Men's grey shacket</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-cart'></i>Add to cart
+                            </button>
+
+                            <button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="card">
+                                &lt;span class="card-badge">TRENDING&lt;/span>
+                                &lt;div class="card-header">
+                                    &lt;div class="card-img-container">
+                                        &lt;img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                        &lt;i class='card-wishlist-icon bx bx-heart'>&lt;/i>
+                                    &lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-body">
+                                    &lt;div class="item-price">Rs. 5,999&lt;/div>
+                                    &lt;div class="card-description">Men's grey shacket&lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-footer">
+                                    &lt;button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                                    &lt;/button>
+
+                                    &lt;button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                                    &lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Card with text overlay -->
+
+                <h2 class="h2">Card with text overlay</h2>
+                <p class="py-2 small-text">
+                    To get card with text overlay, add two classes <span
+                        class="primary-text-color">"overlay-container"</span> and <span
+                        class="primary-text-color">"overlay-text"</span> to children elements of <span
+                        class="primary-text-color">"card"</span> class. Copy below code and put your desired overlay
+                    text and image and you are good to go.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+
+                    <div class="card">
+                        <div class="overlay-container">
+                            <div class="card-header">
+                                <div class="card-img-container">
+                                    <img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                    <i class='card-wishlist-icon bx bx-heart'></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="item-price">Rs. 5,999</div>
+                                <div class="card-description">Men's grey shacket</div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                    <i class='btn-icon bx bxs-cart'></i>Add to cart
+                                </button>
+
+                                <button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                    <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="overlay-text">OUT OF STOCK</div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="card">
+                                &lt;div class="overlay-container">
+                                    &lt;div class="card-header">
+                                        &lt;div class="card-img-container">
+                                            &lt;img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                            &lt;i class='card-wishlist-icon bx bx-heart'>&lt;/i>
+                                        &lt;/div>
+                                    &lt;/div>
+                                    &lt;div class="card-body">
+                                        &lt;div class="item-price">Rs. 5,999&lt;/div>
+                                        &lt;div class="card-description">Men's grey shacket&lt;/div>
+                                    &lt;/div>
+                                    &lt;div class="card-footer">
+                                        &lt;button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                            &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                                        &lt;/button>
+                    
+                                        &lt;button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                            &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                                        &lt;/button>
+                                    &lt;/div>
+                                &lt;/div>
+                                &lt;div class="overlay-text">OUT OF STOCK&lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Card with shadow -->
+
+                <h2 class="h2">Card with shadow</h2>
+                <p class="py-2 small-text">
+                    To get shadow effect on card, add class <span class="primary-text-color">"shadow"</span> with <span
+                        class="primary-text-color">"card"</span> class. Copy below code and put your card details and
+                    you are good to go.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <div class="card-img-container">
+                                <img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                <i class='card-wishlist-icon bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="item-price">Rs. 5,999</div>
+                            <div class="card-description">Men's grey shacket</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-cart'></i>Add to cart
+                            </button>
+
+                            <button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                <i class='btn-icon bx bxs-bolt'></i>Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="card shadow">
+                                &lt;div class="card-header">
+                                    &lt;div class="card-img-container">
+                                        &lt;img class="card-img" src="./components/Images/card-man-img.jpeg" alt="men-shacket">
+                                        &lt;i class='card-wishlist-icon bx bx-heart'>&lt;/i>
+                                    &lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-body">
+                                    &lt;div class="item-price">Rs. 5,999&lt;/div>
+                                    &lt;div class="card-description">Men's grey shacket&lt;/div>
+                                &lt;/div>
+                                &lt;div class="card-footer">
+                                    &lt;button class="btn card-btn primary-outline-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-cart'>&lt;/i>Add to cart
+                                    &lt;/button>
+                
+                                    &lt;button class="btn card-btn primary-solid-btn primary-btn-text-icon">
+                                        &lt;i class='btn-icon bx bxs-bolt'>&lt;/i>Buy Now
+                                    &lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Grid Component -->
+
+            <div>
+                <h1 id="grid" class="h1">Grid Simplified</h1>
+                <p class="py-2 medium-text">
+                    <span class="primary-text-color">CSS Grid</span> is a powerful tool that allows for two-dimensional layouts to be created on the web.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Grid auto fit -->
+
+                <h2 class="h2">Grid auto fit</h2>
+                <p class="py-2 small-text">
+                    <!-- You can layout your page in 2 columns by add class <spna class="primary-text-color">"grid-cl-2"</spna> -->
+                    By adding class <span class="primary-text-color">"grid"</span> and <span class="primary-text-color">"grid-auto"</span>. Itmes will automatically fit inside parent conatiner with minimum width of 320px.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <div class="grid grid-auto">
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="grid grid-auto">
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Two columns grid -->
+
+                <h2 class="h2">Two columns grid</h2>
+                <p class="py-2 small-text">
+                    You can layout your page in 2 columns by adding class <spna class="primary-text-color">"grid-cl-2"</spna> with <span class="primary-text-color">"grid"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <div class="grid grid-cl-2">
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="grid grid-cl-2">
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Three columns grid -->
+
+                <h2 class="h2">Three columns grid</h2>
+                <p class="py-2 small-text">
+                    You can layout your page in 3 columns by adding class <spna class="primary-text-color">"grid-cl-3"</spna> with <span class="primary-text-color">"grid"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <div class="grid grid-cl-3">
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="grid grid-cl-3">
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                                &lt;div class="grid-item">&lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Image component -->
+
+            <div>
+                <h1 class="h1" id="image">Image</h1>
+                <p class="py-2 medium-text">
+                    Images can be responsive to fit the parent's width, and also can be customised to be round shaped
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Responsive Image -->
+
+                <h2 class="h2">Responsive Image</h2>
+                <p class="py-2 small-text">
+                    You can add class <span class="primary-text-color">"img-responsive"</span> to make your image fit
+                    the
+                    width of container. It's height will get adjusted by keeping the aspect ratio same. If you want to
+                    change the aspect ratio, you will have to crop the image.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <img src="./components/Images/fruits.jpeg" alt="fruits" class="img-responsive">
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;img src="./components/Images/fruits.jpeg" alt="fruits" class="img-responsive">
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Round Image -->
+
+                <h2 class="h2">Round Image</h2>
+                <p class="py-2 small-text">
+                    You can add class <span class="primary-text-color">"img-round"</span> to make your image round
+                    shaped.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example container-flex-center">
+                    <img src="./components/Images/memoji.png" alt="memoji" class="img-round">
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;img src="./components/Images/memoji.png" alt="memoji" class="img-round">
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Input component -->
+
+            <div>
+                <h1 class="h1" id="input">Input</h1>
+                <p class="py-2 medium-text">
+                    Inputs are necessary for user interaction with the website. Inputs are used to take information from
+                    the user, and then save the data to the server, accordingly.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Textbox input -->
+
+                <h2 class="h2">Textbox basic input</h2>
+                <p class="py-2 small-text">
+                    Basic inputs are the heart of user interaction when we need to get input from the user.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <form>
+                        <label for="username-input">Username :</label>
+                        <input type="text" id="username-input" class="input-box input-default"
+                            placeholder="Enter your username">
+
+                        <label for="user-password">Password : </label>
+                        <input type="text" id="user-password" class="input-box input-default"
+                            placeholder="Enter your password">
+                    </form>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;form>
+                                &lt;label for="username-input">Username :&lt;/label>
+                                &lt;input type="text" id="username-input" class="input-box input-default" placeholder="Enter your username">
+        
+                                &lt;label for="user-password">Password : &lt;/label>
+                                &lt;input type="text" id="user-password" class="input-box input-default" placeholder="Enter your password">
+                            &lt;/form>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Input with validations -->
+
+                <h2 class="h2">Input with validations</h2>
+                <p class="py-2 small-text">
+                    You can add class <span class="primary-text-color">"input-default, input-success, input-error,
+                        input-warning"</span> with class <span class="primary-text-color">"input-box"</span> to get
+                    input box with validations.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+
+                    <label for="default">Default</label>
+                    <input type="text" class="input-box input-default" placeholder="Default state">
+
+                    <label for="success">Success</label>
+                    <input type="text" id="success" class="input-box input-success" placeholder="Success state">
+
+                    <label for="error">Error</label>
+                    <input type="text" id="error" class="input-box input-error" placeholder="Error state">
+
+                    <label for="warning">Warning</label>
+                    <input type="text" id="warning" class="input-box input-warning" placeholder="Warning state">
+
+                    <label for="disabled">Disable</label>
+                    <input type="text" id="disabled" disabled class="input-box input-disabled"
+                        placeholder="Disabled state">
+
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;label for="default">Default&lt;/label>
+                            &lt;input type="text" class="input-box input-default" placeholder="Default state">
+
+                            &lt;label for="success">Success&lt;/label>
+                            &lt;input type="text" id="success" class="input-box input-success" placeholder="Success state">
+
+                            &lt;label for="error">Error&lt;/label>
+                            &lt;input type="text" id="error" class="input-box input-error" placeholder="Error state">
+
+                            &lt;label for="warning">Warning&lt;/label>
+                            &lt;input type="text" id="warning" class="input-box input-warning" placeholder="Warning state">
+
+                            &lt;label for="disabled">Disable&lt;/label>
+                            &lt;input type="text" id="disabled" disabled class="input-box input-disabled" placeholder="Disabled state">
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- List component -->
+
+            <div>
+                <h1 id="list" class="h1">Lists</h1>
+                <p class="py-2 medium-text">
+                    Lists can be used at so many places, navigation bar, stacked notifications, article pages, etc.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Normal list -->
+
+                <h2 class="h2">Normal List</h2>
+                <p class="py-2 small-text">
+                    To get a list, add class
+                    <span class="primary-text-color">"list"</span>.
+                </p>
+
+                <div class="p-4 my-2 component-example container-flex-center">
+                    <ul class="list">
+                        <div class="list-heading">Fruits</div>
+                        <li>Apple</li>
+                        <li>Mango</li>
+                        <li>Avocado</li>
+                        <li>Banana</li>
+                        <li>Orange</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;ul class="list">
+                                &lt;div class="list-heading">Fruits&lt;/div>
+                                &lt;li>Apple&lt;/li>
+                                &lt;li>Mango&lt;/li>
+                                &lt;li>Avocado&lt;/li>
+                                &lt;li>Banana&lt;/li>
+                                &lt;li>Orange&lt;/li>
+                            &lt;/ul>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Stacked List -->
+
+                <h2 class="h2">Stacked List</h2>
+                <p class="py-2 small-text">
+                    To get stacked list, add class
+                    <span class="primary-text-color">"stacked-list"</span> with <span
+                        class="primary-text-color">"list"</span>.
+                </p>
+
+                <div class="p-4 my-2 component-example container-flex-center">
+                    <ul class="list stacked-list">
+                        <li>Notification 1</li>
+                        <li>Notification 2</li>
+                        <li>Notification 3</li>
+                        <li>Notification 4</li>
+                        <li>Notification 5</li>
+                        <li>Notification 6</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;ul class="list stacked-list">
+                                &lt;li>Notification 1&lt;/li> 
+                                &lt;li>Notification 2&lt;/li> 
+                                &lt;li>Notification 3&lt;/li> 
+                                &lt;li>Notification 4&lt;/li> 
+                                &lt;li>Notification 5&lt;/li> 
+                                &lt;li>Notification 6&lt;/li> 
+                            &lt;/ul>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Modal Component -->
+
+            <div>
+                <h1 class="h1" id="modal">Modal</h1>
+                <p class="py-2 medium-text">
+                    The modal component provides a solid foundation for creating dialogs, popovers, lightboxes.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Standard Modal -->
+                <h2 class="h2">Standard Modal</h2>
+                <p class="py-2 small-text">
+                    You can use modal component by simply adding 
+                    <span class="primary-text-color">"modal"</span> class. Check below code and copy paste.
+                </p>
+                <p class="small-text">
+                    <span class="primary-text-color modal-demo-click">Click here</span> for live demo.
+                </p>
+
+                <div id="modal-live-demo" class="modal-demo">
+                    <div class="modal">
+                        <div class="modal-header">
+                            <div class="modal-title">Modal Title</div>
+                            <i class='modal-close bx bx-x'></i>
+                        </div>
+                        <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam temporibus mollitia provident a? Illo saepe libero voluptas pariatur est beatae!</div>
+                        <div class="modal-footer">
+                         <button class="btn secondary-solid-btn">Close</button>
+                         <button class="btn primary-solid-btn">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 my-2 radius-5 container-flex-center component-example">
+                   <div class="modal">
+                       <div class="modal-header">
+                           <div class="modal-title">Modal Title</div>
+                           <i class='modal-close bx bx-x'></i>
+                       </div>
+                       <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam temporibus mollitia provident a? Illo saepe libero voluptas pariatur est beatae!</div>
+                       <div class="modal-footer">
+                        <button class="btn secondary-solid-btn">Close</button>
+                        <button class="btn primary-solid-btn">Save Chnages</button>
+                       </div>
+                   </div>
+                </div>
+
+                <h3 class="h3">HTML Code:</h3>
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="modal">
+                                &lt;div class="modal-header">
+                                    &lt;div class="modal-title">Modal Title&lt;/div>
+                                    &lt;i class='modal-close bx bx-x'>&lt;/i>
+                                &lt;/div>
+                                &lt;div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam temporibus mollitia provident a? Illo saepe libero voluptas pariatur est beatae!&lt;/div>
+                                &lt;div class="modal-footer">
+                                 &lt;button class="btn secondary-solid-btn">Close&lt;/button>
+                                 &lt;button class="btn primary-solid-btn">Save Chnages&lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <h3 class="h3">JavaScript Code:</h3>
+                <div>
+                    <pre>
+                        <code class="javascript code-example">
+                            const modalLiveDemo = document.querySelector('#modal-live-demo');
+                            const modalCloseButton = document.querySelector('.modal-close');
+                            const modalDemoClick = document.querySelector('.modal-demo-click');
+
+                            modalCloseButton.addEventListener('click', () => {
+                                modalLiveDemo.classList.remove('active-modal');
+                            })
+
+                            modalDemoClick.addEventListener('click', () => {
+                                modalLiveDemo.classList.add('active-modal');
+                            })
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Navigation component -->
+
+            <div>
+                <h1 class="h1" id="navigation">Navigation</h1>
+                <p class="py-2 medium-text">
+                    Navigation bar is used to navigate through the web apps or websites. This navigation component is
+                    responsive.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Simple Navbar -->
+
+                <h2 class="h2">Simple Navbar for Desktop</h2>
+                <p class="py-2 small-text">
+                    To get navbar, add class
+                    <span class="primary-text-color">"nav-bar"</span>. Check below code and copy paste.
+                </p>
+                <div class="p-4 my-2 radius-5 component-example">
+                    <nav class="nav-bar z-index-0 shadow">
+                        <div class="left-nav">
+                            <a class="h2 primary-text-color" onclick="return false" href="#">LOGO</a>
+                        </div>
+
+                        <ul class="right-nav">
+                            <li><a class="nav-pills" onclick="return false" href="#">Link 1</a></li>
+                            <li><a class="nav-pills" onclick="return false" href="#">Link 2</a></li>
+                            <li><a class="nav-pills" onclick="return false" href="#">Link 3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;nav class="nav-bar shadow">
+                                &lt;div class="left-nav">
+                                    &lt;a class="h2 primary-text-color" href="#">LOGO&lt;/a>
+                                &lt;/div>
+                                &lt;ul class="right-nav">
+                                    &lt;li>&lt;a class="nav-pills" href="#">Link 1&lt;/a>&lt;/li>
+                                    &lt;li>&lt;a class="nav-pills" href="#">Link 2&lt;/a>&lt;/li>
+                                    &lt;li>&lt;a class="nav-pills" href="#">Link 3&lt;/a>&lt;/li>
+                                &lt;/ul>
+                            &lt;/nav>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Navbar for mobile -->
+
+                <h2 class="h2">Navbar for mobile (Hamburger Icon)</h2>
+                <p class="py-2 small-text">
+                    To get the hamburger icon in mobile view. Copy below code.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <nav class="nav-bar z-index-0 shadow">
+                        <div class="left-nav">
+                            <a class="h2 primary-text-color" onclick="return false" href="#">LOGO</a>
+                        </div>
+
+                        <i class='hamburger-icon bx bx-menu'></i>
+                        <div class="hamburger-menu">
+                            <i class='hamburger-close bx bx-x'></i>
+                            <ul class="hamburger-list">
+                                <li class="hamburger-link"><a href="#">Home</a></li>
+                                <li class="hamburger-link"><a href="#">Docs</a></li>
+                                <li class="hamburger-link"><a href="#">GitHub</a></li>
+                                <li class="hamburger-link"><a href="#">Installation</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <h3 class="h3 py-1">HTML code:</h3>
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;nav class="nav-bar z-index-0 shadow">
+                                &lt;div class="left-nav">
+                                    &lt;a class="h2 primary-text-color" href="#">LOGO&lt;/a>
+                                &lt;/div>
+        
+                                &lt;ul class="right-nav">
+                                    &lt;li>&lt;a class="nav-pills" href="#">Link 1&lt;/a>&lt;/li>
+                                    &lt;li>&lt;a class="nav-pills" href="#">Link 2&lt;/a>&lt;/li>
+                                    &lt;li>&lt;a class="nav-pills" href="#">Link 3&lt;/a>&lt;/li>
+                                &lt;/ul>
+
+                                &lt;!-- Hamburger Menu for smaller display -->
+                                &lt;i class='hamburger-icon bx bx-menu'>&lt;/i>
+                                &lt;div class="hamburger-menu">
+                                    &lt;i class='hamburger-close bx bx-x'>&lt;/i>
+                                    &lt;ul class="hamburger-list">
+                                        &lt;li class="hamburger-link">&lt;a href="#">Home&lt;/a>&lt;/li>
+                                        &lt;li class="hamburger-link">&lt;a href="#">Docs&lt;/a>&lt;/li>
+                                        &lt;li class="hamburger-link">&lt;a href="#">GitHub&lt;/a>&lt;/li>
+                                        &lt;li class="hamburger-link">&lt;a href="#">Installation&lt;/a>&lt;/li>
+                                    &lt;/ul>
+                                &lt;/div>
+                            &lt;/nav>
+                        </code>
+                    </pre>
+                </div>
+
+                <h3 class="h3 py-1">JavaScript code:</h3>
+                <div>
+                    <pre>
+                        <code class="javascript code-example">
+                            const hamburgerIcon = document.querySelector('.hamburger-icon');
+                            const hamburgerMenu = document.querySelector('.hamburger-menu');
+                            const hamburgerClose = document.querySelector('.hamburger-close');
+                            const hamburgerLink = document.querySelectorAll('.hamburger-link');
+
+                            hamburgerIcon.addEventListener('click', () => {
+                                hamburgerMenu.classList.add('hamburger-menu-open');
+                            });
+
+                            hamburgerClose.addEventListener('click', () => {
+                                hamburgerMenu.classList.remove('hamburger-menu-open');
+                            });
+
+                            hamburgerLink.forEach(link => {
+                                
+                                link.addEventListener('click', () => {
+                                    hamburgerMenu.classList.remove('hamburger-menu-open');
+                                });
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Ratig component -->
+
+            <div>
+                <h1 class="h1" id="rating">Rating</h1>
+                <p class="py-2 medium-text">Ratings are used to display user responses for and particular product.</p>
+
+                <hr class="my-4">
+
+                <!-- Standard Rating -->
+                <h2 class="h2">Standard Rating</h2>
+                <p class="py-2 small-text">
+                    You can use rating component by adding <span class="primary-text-color">"rating"</span> on parent element and <span class="primary-text-color">"rating-star"</span> on children elements.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <div class="rating">
+                        <i class='rating-star bx bx-star'></i>
+                        <i class='rating-star bx bx-star'></i>
+                        <i class='rating-star bx bx-star'></i>
+                        <i class='rating-star bx bx-star'></i>
+                        <i class='rating-star bx bx-star'></i>
+                    </div>
+                </div>
+
+                <h3 class="h3">HTML Code:</h3>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="rating">
+                                &lt;i class='rating-star bx bx-star'>&lt;/i>
+                                &lt;i class='rating-star bx bx-star'>&lt;/i>
+                                &lt;i class='rating-star bx bx-star'>&lt;/i>
+                                &lt;i class='rating-star bx bx-star'>&lt;/i>
+                                &lt;i class='rating-star bx bx-star'>&lt;/i>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <h3 class="h3">JavaScript Code:</h3>
+
+                <div>
+                    <pre>
+                        <code class="javascript code-example">
+                            const starRating = document.querySelectorAll('.rating-star'); 
+
+                            starRating.forEach((star, index) => {
+    
+                                star.addEventListener('click', () => {
+                                    for(let i=0; i < 5; i++) {
+                                        starRating[i].classList.remove('bxs-star');
+                                    }
+
+                                    for(let i=0; i <= index; i++) {
+                                        starRating[i].classList.add('bxs-star');
+                                    }
+                                });
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>            
+
+            <hr class="my-4 section-hr"></hr>
+
+            <!-- Slider Component -->
+
+            <div>
+                <h1 class="h1" id="slider">Slider</h1>
+                <p class="py-2 medium-text">Sliders allow the users to make selections from a range of values.</p>
+
+                <hr class="my-4">
+
+                <!-- Basic Slider -->
+                <h2 class="h2">Basic Slider</h2>
+                <p class="py-2 small-text">
+                    You can use slider component by adding <span class="primary-text-color">"slider"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <input class="slider" type="range" min="0" max="500" value="10">
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;input class="slider" type="range" min="0" max="500" value="50">
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+             <!-- Toast component -->
+
+            <div>
+                <h1 id="toast" class="h1">Toast</h1>
+                <p class="py-2 medium-text">
+                    Snackbar is to used show messages, notifications, or some actions that need users attention.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Simple Toast -->
+
+                <h2 class="h2">Simple Toast</h2>
+                <p class="py-2 small-text">
+                    You can use toast component by adding <span class="primary-text-color">"toast"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <div class="toast">
+                        <p>
+                            Can't send photo. Retry in 5 seconds.
+                            <a onclick="return false" class="primary-text-color pl-2" href="#">RETRY</a>
+                            <div class="close-toast">X</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                                &lt;div class="toast">
+                                    &lt;p>
+                                        Can't send photo. Retry in 5 seconds.
+                                        &lt;a class="primary-text-color pl-2" href="#">RETRY&lt;/a>
+                                        &lt;div class="close-toast">X&lt;/div>
+                                    &lt;/p>
+                                &lt;/div>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Primary toast -->
+
+                <h2 class="h2">Primary Toast</h2>
+                <p class="py-2 small-text">
+                    You can use primary toast component by adding <span class="primary-text-color">"toast-primary"</span> class with <span class="primary-text-color">"toast"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <div class="toast toast-primary">
+                        <p>
+                            Primary Toast
+                            <div class="close-toast">X</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="toast toast-primary">
+                                &lt;p>
+                                    Primary Toast
+                                    &lt;div class="close-toast">X&lt;/div>
+                                &lt;/p>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Success Toast -->
+
+                <h2 class="h2">Success Toast</h2>
+                <p class="py-2 small-text">
+                    You can use success toast component by adding <span class="primary-text-color">"toast-success"</span> class with <span class="primary-text-color">"toast"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <div class="toast toast-success">
+                        <p>
+                            Success Toast
+                            <div class="close-toast">X</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="toast toast-success">
+                                &lt;p>
+                                    Success Toast
+                                    &lt;div class="close-toast">X&lt;/div>
+                                &lt;/p>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Danger Toast -->
+
+                <h2 class="h2">Danger Toast</h2>
+                <p class="py-2 small-text">
+                    You can use danger toast component by adding <span class="primary-text-color">"toast-danger"</span> class with <span class="primary-text-color">"toast"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <div class="toast toast-danger">
+                        <p>
+                            Danger Toast
+                            <div class="close-toast">X</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="toast toast-danger">
+                                &lt;p>
+                                    Danger Toast
+                                    &lt;div class="close-toast">X&lt;/div>
+                                &lt;/p>
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Warning Toast -->
+                
+                <h2 class="h2">Warning Toast</h2>
+                <p class="py-2 small-text">
+                    You can use warning toast component by adding <span class="primary-text-color">"toast-danger"</span> class with <span class="primary-text-color">"toast"</span> class.
+                </p>
+
+                <div class="p-4 my-2 radius-5 container-flex-justify-center component-example">
+                    <div class="toast toast-warning">
+                        <p>
+                            Warning Toast
+                            <div class="close-toast">X</div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 section-hr">
+
+            <!-- Typography -->
+
+            <div>
+                <h1 class="h1" id="typography">Typography</h1>
+                <p class="py-2 medium-text">Check out below text utilities.</p>
+
+                <hr class="my-4">
+
+                <!-- Headings -->
+                <h2 class="h2 mt-4">Headings</h2>
+                <p class="py-2 small-text">
+                    For heading you can use h1, h2, h3, h4, h5, h6 elements.
+                    The same font-styling is present for class names
+                    <span class="primary-text-color">h1, h2, h3, h4, h5, h6</span>
+                    class. You can add one of these classes to style the text.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <h1 class="h1 p-2">H1 - Heading</h1>
+                    <h2 class="h2 p-2">H2 - Heading</h2>
+                    <h3 class="h3 p-2">H3 - Heading</h3>
+                    <h4 class="h4 p-2">H4 - Heading</h4>
+                    <h5 class="h5 p-2">H5 - Heading</h5>
+                    <h6 class="h6 p-2">H6 - Heading</h6>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;h1 class="h1">H1 - Heading&lt;/h1>
+
+                            &lt;h2 class="h2">H2 - Heading&lt;/h2>
+
+                            &lt;h3 class="h3">H3 - Heading&lt;/h3>
+
+                            &lt;h4 class="h4">H4 - Heading&lt;/h4>
+
+                            &lt;h5 class="h5">H5 - Heading&lt;/h5>
+
+                            &lt;h6 class="h6">H6 - Heading&lt;/h6>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <h2 class="h2">Small Text</h2>
+                <p class="py-2 small-text">
+                    For small text you can use class
+                    <span class="primary-text-color">"small-text"</span>
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <div class="small-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptates numquam officia
+                        nostrum! Voluptatum id modi quam asperiores perspiciatis perferendis.
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="small-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptates numquam officia nostrum! Voluptatum id modi quam asperiores perspiciatis perferendis.
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Grey text -->
+
+                <h2 class="h2">Grey Text</h2>
+                <p class="py-2 small-text">
+                    To use grey text color, add class
+                    <span class="primary-text-color">"grey-text-color"</span>.
+                </p>
+
+                <div class="p-4 my-2 component-example radius-5">
+                    <div class="grey-text-color">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore laudantium aspernatur
+                        eveniet culpa numquam accusamus ducimus in qui? Culpa, commodi.
+                    </div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="grey-text-color">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore laudantium aspernatur eveniet culpa numquam accusamus ducimus in qui? Culpa, commodi.
+                            &lt;/div>
+                        </code>
+                    </pre>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Center Text -->
+
+                <h2 class="h2">Center Text</h2>
+                <p class="py-2 small-text">
+                    To center a text, add class
+                    <span class="primary-text-color">"text-center"</span>.
+                </p>
+
+                <div class="p-4 my-2 radius-5 component-example">
+                    <div class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.</div>
+                </div>
+
+                <div>
+                    <pre>
+                        <code class="html code-example">
+                            &lt;div class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing.&lt;/div>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer-container p-2">
+        <p class="pt-1 pb-2 small-text">Made with <span class="code-symbol">&lt;/></span> by Tushar Shukla</p>
+        <ul>
+            <li class="footer-link"><a href="https://github.com/tushareshukla target="_blank"><i
+                        class='bx bxl-github'></i></a></li>
+            <li class="footer-link"><a href="https://twitter.com/tushharshukla" target="_blank"><i
+                        class='bx bxl-twitter'></i></a></li>
+            <li class="footer-link"><a href="https://www.linkedin.com/in/tushar-shukla-88a8321ba/" target="_blank"><i
+                        class='bx bxl-linkedin-square'></i></a></li>
+        </ul>
+        <div>&copy 2024 | Namo UI | All Rights Reserved</div>
+    </footer>
+
+    <script src="./JS/rating.js"></script>
+    <script src="./JS/modal.js"></script>
+    <script src="./JS/navbar.js"></script>
+    <script src="./JS/aside.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>
